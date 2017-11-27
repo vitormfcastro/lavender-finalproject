@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="wrapper" ng-init="limit= 6">
+        <div class="item" ng-if="images.length > 0" ng-repeat="image in images | limitTo: limit">
+            <a ui-sref="image({id: {{image.id}} })">
+                <div class="image">
+                    <img src="https://s3.amazonaws.com/spicedling/{{image.image}}" alt="{{image.description}}" />
+                </div>
+                <div class="description">
+                    <p class="title"><span>{{image.title}}</span></p>
+                    <p class="user">By: {{image.username}}</p>
+                    <p>{{image.description}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <button id="more" ng-click="limit=limit+6" ng-show="images.length > limit">More images</button>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="container" ng-controller="clickedImage">
+
+<h2 class="close"><a href="/"><button>back</button></a></h2>
+
+
+    <div class="image">
+        <img src="https://s3.amazonaws.com/spicedling/{{singleImage[0].image}}" class="selected" alt="{{singleImage[0].description}}">
+    </div>
+    <h2 class="single">{{singleImage[0].title}} by {{singleImage[0].username}}</h2>
+    <h2 class="double">{{singleImage[0].description}}</h2>
+    <h3 class="single">Comment</h3>
+
+    <form method="post" id="comment-form" ng-submit="commentNow()">
+        <input ng-model="username" type="text" name="username" placeholder="Username">
+        <input ng-model="comment" name="comment" class="input-comment" placeholder="Comment" maxlength="140"></input>
+        <button type="submit" ng-click="refresh()">submit</button>
+    </form>
+
+    <h3 class="message" ng-show="comments.length > 0"><span class="toggle" ng-click="toggle()">{{message}} comments</span></h3>
+
+    <div id="comments">
+        <div class="full-comment" ng-if="comments.length > 0" ng-repeat="comment in comments">
+            <div class="commenter">
+                <h4>{{comment.username}} said: {{comment.comment}}</h4>
+            </div>
+            <div class="comment">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+</div>

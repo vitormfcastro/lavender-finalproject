@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    border: none;
+    background: #f7f7f7;
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 5em;
+    display: inline;
+}
+
+
+
+span {
+    color: black;
+
+}
+
+.container {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.nav {
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
+
+
+.wrapper {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    min-height: 370px;
+    width: 320px;
+    background: white;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 0px solid;
+    border-radius: 20px;
+}
+
+.item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #e8e8e8;
+    background: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
+
+}
+
+.item img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.item:hover img {
+    filter: brightness(105%);
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+    min-height: 240px;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.title span {
+    font-size: 1.35em;
+    font-weight: bold;
+
+    color: black;
+}
+
+.description {
+    min-height: 130px;
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+}
+
+p {
+    margin-top: 5px;
+
+    font-size: .8em;
+}
+
+p::first-letter {
+    text-transform: capitalize;
+}
+
+.user {
+    font-weight: bold;
+}
+
+
+
+/*#form {
+    height: 100%;
+    width: 30vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 100%;
+    background: white;
+    box-shadow: 0 0 10px grey;
+}*/
+
+
+
+#form input, textarea {
+    width: 80%;
+    min-width: 250px;
+    margin: 10px 10px 0 20px;
+    color: grey;
+    font-family: 'Archivo Black', sans-serif;
+
+}
+
+textarea {
+    border: 1px solid silver;
+    padding: 10px;
+    font-size: .8em;
+}
+
+input::placeholder, textarea::placeholder {
+    color: silver;
+}
+
+input {
+    height: 40px;
+    padding: 5px;
+}
+
+h2 {
+
+}
+
+h2.close {
+  margin: 2px;
+  position: absolute;
+  margin: 20px;
+}
+
+h2.close:hover {
+  position: absolute
+
+}
+h2.single {
+  margin: 2px;
+
+  font-size: 1.5em;
+
+}
+h2.double {
+  margin: 2px;
+
+  font-size: 1em;
+
+
+}
+
+
+
+
+
+
+button {
+    text-align: center;
+    margin: 10px 0 0 20px;
+    height: 30px;
+    width: 100px;
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
+    border: none;
+    font-size: .8em;
+
+}
+
+button.slidetoggle{
+    text-align: center;
+    margin: 10px 0 0 20px;
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
+    border: none;
+    font-size: 2em;
+
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+    position:fixed;
+    top:0;
+}
+
+button.slidetoggle:hover{
+  background-position: right center;
+
+
+}
+
+
+button:hover, #close:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#close {
+    font-size: 1.1em;
+    color: silver;
+    float: right;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+#more {
+    display: block;
+    height: 45px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+
+.single {
+    margin: 10px 0;
+}
+
+.selected {
+    width: 100%;
+    height: 100%;
+
+}
+
+.slide-in {
+    animation: slideIn 1.5s;
+}
+
+
+.load {
+    animation: loading 3.5s linear;
+}
+
+
+
+#comment-form input {
+    font-family: 'Archivo Black', sans-serif;
+
+    margin-top: 0;
+    height: 30px;
+}
+
+#comment-form button {
+    display: inline;
+    margin: 0;
+}
+
+
+.input-comment {
+    width: 67%;
+    margin: 0 30px;
+}
+
+.message {
+    margin: 20px 0;
+}
+
+.toggle {
+    background: none;
+    font-style: normal;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    color: #555;
+}
+
+#comments {
+    display: none;
+}
+
+
+.full-comment {
+    margin-bottom: 20px;
+}
+
+.commenter {
+    font-size: 0.9em;
+
+    margin: 0;
+    padding: 0px;
+}
+
+.date {
+    background: none;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.comment {
+
+    margin-top: 0;
+    padding: 0px;
+}
+
+
+/*go down*/
+
+header {
+    width: 80%;
+    margin: 50px auto;
+    display: none;
+    margin-bottom: 0px;
+
+
+
+}
+
+.main{
+  margin-top: 75px;
+}
