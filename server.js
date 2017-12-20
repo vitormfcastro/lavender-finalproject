@@ -50,7 +50,7 @@ app.post('/upload', uploader.single('file'), (req, res) => {
     if (req.file) {
         s3.upload(req.file)
         .then(() => {
-            db.addImage(req.file.filename, req.body.username, req.body.title, req.body.description)
+            db.addImage(req.file.filename, req.body.username, req.body.title, req.body.description, req.body.directions, req.body.ingredients)
         })
     }
 })

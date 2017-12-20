@@ -12,6 +12,8 @@ myApp.controller('mainController', ($scope, $http, $location) => {
     $scope.title = '';
     $scope.username = '';
     $scope.description = '';
+    $scope.directions = '';
+    $scope.ingredients = '';
     $scope.file = {};
 
     $scope.submit = () => {
@@ -19,11 +21,16 @@ myApp.controller('mainController', ($scope, $http, $location) => {
         var username = $scope.username;
         var title = $scope.title;
         var description = $scope.description;
+        var directions = $scope.directions;
+        var ingredients = $scope.ingredients;
+
         var formData = new FormData();
         formData.append('file', file);
         formData.append('username', username);
         formData.append('title', title);
         formData.append('description', description);
+        formData.append('directions', directions);
+        formData.append('ingredients', ingredients);
         $http({
             url: '/upload',
             method: 'POST',
@@ -38,9 +45,11 @@ myApp.controller('mainController', ($scope, $http, $location) => {
         });
     }
 
+
+
 //Form functionality:
     $scope.upload = () => {
-        if ($scope.username && $scope.title && $scope.description && $scope.file) {
+        if ($scope.username && $scope.title && $scope.description && $scope.directions && $scope.ingredients && $scope.file) {
             setTimeout(() => {
                 $http.get('/images')
                 .then((response) => {
@@ -49,10 +58,28 @@ myApp.controller('mainController', ($scope, $http, $location) => {
                     $scope.title = ""
                     $scope.file = {}
                     $scope.description = ""
+                    $scope.directions = ""
+                    $scope.ingredients = ""
+
+
                 });
             }, 3500)
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 //Single image view:

@@ -17,8 +17,8 @@ function getImageById(id) {
     })
 }
 
-function addImage(image, username, title, description) {
-    return db.query(`INSERT INTO images (image, username, title, description) VALUES ($1, $2, $3, $4)`, [image, username, title, description])
+function addImage(image, username, title, description, directions, ingredients) {
+    return db.query(`INSERT INTO images (image, username, title, description, directions, ingredients) VALUES ($1, $2, $3, $4, $5, $6)`, [image, username, title, description, directions, ingredients])
     .then(() => {
         console.log('Success!');
     })

@@ -5,10 +5,13 @@
 
 
     <div class="image">
-        <img src="https://s3.amazonaws.com/spicedling/{{singleImage[0].image}}" class="selected" alt="{{singleImage[0].description}}">
+        <img src="https://s3.amazonaws.com/vitormfcastro/{{singleImage[0].image}}" class="selected" alt="{{singleImage[0].description}}">
     </div>
     <h2 class="single">{{singleImage[0].title}} by {{singleImage[0].username}}</h2>
     <h2 class="double">{{singleImage[0].description}}</h2>
+    <h2 class="double">Ingredients: {{singleImage[0].ingredients}}</h2>
+    <h2 class="double">Directions: {{singleImage[0].directions}}</h2>
+
     <h3 class="single">Comment</h3>
 
     <form method="post" id="comment-form" ng-submit="commentNow()">
